@@ -32,4 +32,7 @@
 *.app
 
 
-_Team/Unity Team Portfolio/Assets/
+Unity Team Portfolio/Assets/
+Unity Team Portfolio/Library/
+Unity Team Portfolio/Packages/
+Unity Team Portfolio/obj/
