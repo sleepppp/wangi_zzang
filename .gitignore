@@ -30,7 +30,20 @@
 *.exe
 *.out
 *.app
-
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pidb.meta
+sysinfo.txt
+*.apk
+*.unitypackage
 Unity Team Portfolio/Library/
 Unity Team Portfolio/obj/
 Unity Team Portfolio/Temp/
