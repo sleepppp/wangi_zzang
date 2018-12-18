@@ -32,6 +32,14 @@
 *.app
 
 
+/*.csproj
+/*.unityproj
+/*.sln
+/*.suo
+/*.user
+/*.userprefs
+/*.pidb
+/*.booproj
 Unity Team Portfolio/Assets/
 Unity Team Portfolio/Library/
 Unity Team Portfolio/Packages/
