@@ -54,24 +54,24 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\DebugUI.cs" />
-     <None Include="Assets\Resources\PolygonNature\Shaders\SyntyStudios_Trees.shader" />
-     <None Include="Assets\Resources\PolygonNature\Shaders\SyntyStudios_Moss.shader" />
-     <None Include="Assets\Resources\PolygonNature\Shaders\SyntyStudios_Vines.shader" />
-     <None Include="Assets\Resources\PolygonNature\Shaders\SyntyStudios_Water.shader" />
-     <None Include="Assets\Resources\PolygonNature\Shaders\SyntyStudios_LOD.shader" />
-     <None Include="Assets\Resources\PolygonNature\Shaders\SkyGradient.shader" />
-     <None Include="Assets\Resources\PolygonNature\Shaders\StandardMike.shader" />
+     <None Include="Assets\Resources\Soonwoo\AssetStore\PolygonNature\Shaders\SyntyStudios_Trees.shader" />
+     <None Include="Assets\Resources\Soonwoo\AssetStore\PolygonNature\Shaders\SyntyStudios_Moss.shader" />
+     <None Include="Assets\Resources\Soonwoo\AssetStore\PolygonNature\Shaders\SyntyStudios_Vines.shader" />
+     <None Include="Assets\Resources\Soonwoo\AssetStore\PolygonNature\Shaders\SyntyStudios_Water.shader" />
+     <None Include="Assets\Resources\Soonwoo\AssetStore\PolygonNature\Shaders\SyntyStudios_LOD.shader" />
+     <None Include="Assets\Resources\Soonwoo\AssetStore\PolygonNature\Shaders\SkyGradient.shader" />
+     <None Include="Assets\Resources\Soonwoo\AssetStore\PolygonNature\Shaders\StandardMike.shader" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/paper/Documents/Unity Projects/Unity Team Portfolio/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/paper/Documents/_Team/Unity Team Portfolio/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/paper/Documents/Unity Projects/Unity Team Portfolio/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/paper/Documents/_Team/Unity Team Portfolio/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/paper/Documents/Unity Projects/Unity Team Portfolio/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/paper/Documents/_Team/Unity Team Portfolio/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/paper/Documents/Unity Projects/Unity Team Portfolio/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/paper/Documents/_Team/Unity Team Portfolio/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
