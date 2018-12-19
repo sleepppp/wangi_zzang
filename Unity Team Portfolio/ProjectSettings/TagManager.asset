@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LUI_Panel
+  - RUI_Panel
+  - TUI_Panel
+  - BUI_Panel
   layers:
   - Default
   - TransparentFX
