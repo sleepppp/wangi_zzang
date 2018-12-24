@@ -21,16 +21,13 @@ public class UIMgr : MonoBehaviour
     private void Awake()
     {
         Screen.SetResolution(Screen.width, Screen.width * setScreenRatio.x / setScreenRatio.y, true);
-    }
-
-    private void Start()
-    {
         vLMenu = GameObject.FindGameObjectsWithTag("LUI_Panel").ToList();
 
-        for (int i=0; i<vLMenu.Count; i++)
+        for (int i = 0; i < vLMenu.Count; i++)
         {
             vLMenu[i].SetActive(i == (int)LUIMenu.MAIN ? true : false);
         }
+
     }
 
     public void OpenCloseAddOnMenu()

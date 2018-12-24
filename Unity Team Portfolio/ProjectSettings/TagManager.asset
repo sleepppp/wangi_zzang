@@ -8,6 +8,8 @@ TagManager:
   - RUI_Panel
   - TUI_Panel
   - BUI_Panel
+  - UI_Bar
+  - UI_MoveCtrl
   layers:
   - Default
   - TransparentFX
