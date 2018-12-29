@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,6 +33,9 @@ public class TestObject : MonoBehaviour
     [HideInInspector]
     public int StatPoint { get; set; }
 
+    private MoveCtrl moveCtrl;
+    private Vector3 moveVector;
+
     private void Awake()
     {
         ObjcetName = "캐릭터";
@@ -39,12 +43,29 @@ public class TestObject : MonoBehaviour
         Exp = 0;
         MaxExp = Hp = MaxHp = Sp = MaxSp = 50;
         Vit = Str = Stm = Dex = StatPoint = 5;
+
+        moveCtrl = FindObjectOfType<MoveCtrl>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    private void FixedUpdate()
+    {
         DecreaseHp();
+        MoevObject();
+    }
+
+    private void MoevObject()
+    {
+        moveVector.x = moveCtrl.InputVector.x;
+        moveVector.z = moveCtrl.InputVector.y;
+
+        transform.Translate(moveVector * 3.0f * Time.deltaTime);
+        
     }
 
     public void DecreaseHp()

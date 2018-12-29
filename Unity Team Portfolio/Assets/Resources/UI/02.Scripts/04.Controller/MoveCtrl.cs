@@ -1,52 +1,60 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class MoveCtrl : MonoBehaviour, IDragHandler, IEndDragHandler
 {
-    public GameObject tObjcet;
+    private GameObject tObjcet;
     private RectTransform moveRange;
-    private Vector3 defaultPos;
+    private RectTransform joyStick;
+    private Vector2 inputVector;
+    public Vector2 InputVector { get { return inputVector; } }
 
-    private float vDir = 0;
-    private float hDir = 0;
-    private bool moveAble = true;
 
     // Start is called before the first frame update
     void Start()
     {
         tObjcet = GameObject.Find("TObject");
-        moveRange = GetComponentInParent<RectTransform>();
-        defaultPos = transform.position;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "UI_MoveCtrl")
-        {
-            Debug.Log("dk");
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-
+        moveRange = transform.parent.GetComponent<RectTransform>();
+        joyStick = GetComponent<RectTransform>();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (!moveAble) return;
+        Vector2 pos;
+        #region 기본 방식
+        /*
+         *  if(RectTransformUtillity.ScreenPointToLocalPointInRectangle(moveRange, eventData.position, eventData.pressEventCamera, out pos))
+         *  {
+         *      pos.x = (pos.x / moveRange.sizeDelta.x);
+         *      pos.y = (pos.y / moveRange.sizeDelta.y);
+         * 
+         *      inputVector = new Vector3(pos.x * 2 + 1, pos.y * 2 - 1, 0);
+         *      inputVector = (inputVetor.magnitude > 1.0f) ? inputVector.normalized : inputVector;
+         *      joyStick.anchoredPosition = new Vector3(inputVector.x * moveRange.sizeDelta.x * 0.33,
+         *                                              inputVector.y * moveRange.szieDelta.y * 0.33);
+         *  }
+         */
+        #endregion
 
-        transform.position = Input.mousePosition;
+        pos.x = (Input.mousePosition.x - moveRange.position.x) / (moveRange.sizeDelta.x * 0.25f);
+        pos.y = (Input.mousePosition.y - moveRange.position.y) / (moveRange.sizeDelta.y * 0.25f);
 
-        vDir = (transform.position.y - defaultPos.y) / moveRange.rect.height * 0.5f;
-        hDir = (transform.position.x - defaultPos.x) / moveRange.rect.width * 0.5f;
+        inputVector = pos;
 
+        inputVector = inputVector.magnitude >= 1.0f ? inputVector.normalized : inputVector;
+
+        joyStick.anchoredPosition = new Vector2(inputVector.x * moveRange.sizeDelta.x * 0.5f,
+                                         inputVector.y * moveRange.sizeDelta.y * 0.5f);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.position = defaultPos;
+        joyStick.anchoredPosition = Vector2.zero;
+        inputVector = Vector2.zero;
     }
+
 }
